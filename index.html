@@ -45,6 +45,19 @@
     .date{display:inline-block;color:#94651e;background:#fbf1dc;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700}.notice h3{font-size:17px;margin:16px 0 8px}.notice p{font-size:14px;color:#697386;line-height:1.8}
     .gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:210px 210px;gap:14px}.gallery div{border-radius:17px;background-size:cover;background-position:center;overflow:hidden;position:relative}.gallery div:first-child{grid-row:span 2;background-image:url('images/temple.jpg')}.gallery div:nth-child(2){background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80')}.gallery div:nth-child(3){background-image:url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80')}.gallery div:nth-child(4){background-image:url('https://images.unsplash.com/photo-1604608672516-4d5b8b3b6a6d?auto=format&fit=crop&w=800&q=80')}.gallery div:nth-child(5){background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80')}
     .gallery div:after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(transparent,#0008)}
+
+    .live-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .live-card{background:#1b2b42;border:1px solid var(--line);border-radius:18px;padding:24px;color:#fff}
+    .live-card h3{color:var(--gold2);margin:0 0 12px}
+    .live-card p{color:#c5cfdd;line-height:1.8;font-size:14px}
+    .live-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#09121e}
+    .live-placeholder{aspect-ratio:16/9;border:1px dashed #8b9aaf;border-radius:12px;display:grid;place-items:center;text-align:center;padding:18px;color:#dce5ef;background:#101b2b}
+    .bhajan-list{display:grid;gap:12px;margin-top:18px}
+    .bhajan-item{padding:14px;border-radius:12px;background:#101b2b;border:1px solid var(--line)}
+    .bhajan-item strong{display:block;color:#fff;margin-bottom:8px}
+    .bhajan-item audio{width:100%}
+    .live-label{display:inline-block;background:#b42318;color:#fff;border-radius:20px;padding:5px 11px;font-size:12px;font-weight:700;margin-bottom:12px}
+    @media(max-width:850px){.live-grid{grid-template-columns:1fr}}
     .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{padding:32px;border:1px solid var(--line);border-radius:20px;background:#1b2b42}.contact-card h3{margin-top:0;color:var(--gold2)}.contact-card p{color:#d1d9e4;line-height:1.9}.contact-line{padding:13px 0;border-bottom:1px solid #ffffff16;color:#e6ebf2}.contact-line:last-child{border:0}
     .map-placeholder{min-height:290px;border-radius:18px;background:linear-gradient(135deg,#263a54,#18273b);display:grid;place-items:center;text-align:center;padding:25px;color:#dce5ef;border:1px solid var(--line)}
     footer{background:#09121e;color:#b8c3d2;padding:28px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
@@ -59,7 +72,7 @@
     <div class="container nav">
       <a class="brand" href="#home"><span class="seal">ॐ</span><span><strong>पशुपति मन्दिर धादिङ</strong><small>PASHUPATI TEMPLE · DHADING</small></span></a>
       <nav id="nav">
-        <a href="#home">गृहपृष्ठ</a><a href="#about">मन्दिर परिचय</a><a href="#services">धार्मिक सेवा</a><a href="#notices">सूचना</a><a href="#gallery">ग्यालरी</a><a href="#contact">सम्पर्क</a>
+        <a href="#home">गृहपृष्ठ</a><a href="#about">मन्दिर परिचय</a><a href="#services">धार्मिक सेवा</a><a href="#bhajan-live">भजन तथा Live</a><a href="#notices">सूचना</a><a href="#gallery">ग्यालरी</a><a href="#contact">सम्पर्क</a>
         <a class="nav-cta" href="#contact">सम्पर्क गर्नुहोस्</a>
       </nav>
       <button class="menu" id="menu" aria-label="मेनु खोल्नुहोस्">☰</button>
@@ -106,6 +119,44 @@
           <article class="feature"><div class="feature-icon">🙏</div><h3>दैनिक पूजा–आराधना</h3><p>भगवान् शिवको पूजा, आरती तथा भक्तिपूर्ण आराधनासम्बन्धी जानकारी।</p></article>
           <article class="feature"><div class="feature-icon">🔱</div><h3>विशेष पर्व तथा उत्सव</h3><p>महाशिवरात्रि, बालाचतुर्दशी तथा अन्य धार्मिक पर्वका कार्यक्रमहरू।</p></article>
           <article class="feature"><div class="feature-icon">🪔</div><h3>धार्मिक अनुष्ठान</h3><p>भक्तजनका धार्मिक अनुष्ठान तथा मन्दिरका विशेष पूजासम्बन्धी जानकारी।</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section dark" id="bhajan-live">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">भक्ति र प्रत्यक्ष प्रसारण</div>
+          <h2>भजन, आरती तथा Live दर्शन</h2>
+          <p>घरमै बसेर भजन–कीर्तन सुन्नुहोस् र मन्दिरका प्रत्यक्ष कार्यक्रम हेर्नुहोस्। प्रसारण सुरु भएपछि यहाँबाट जोडिन सक्नुहुन्छ।</p>
+        </div>
+        <div class="live-grid">
+          <article class="live-card">
+            <span class="live-label">🔴 LIVE</span>
+            <h3>YouTube Live</h3>
+            <p>YouTube Live सुरु भएपछि व्यवस्थापन समितिले दिएको Live Video ID यहाँ राख्नुहोस्।</p>
+            <div class="live-placeholder">
+              <div><div style="font-size:36px">▶️</div><strong>YouTube Live प्रसारण</strong><p>प्रसारण लिंक प्राप्त भएपछि यहाँ भिडियो देखिनेछ।</p></div>
+            </div>
+          </article>
+          <article class="live-card">
+            <span class="live-label">🔴 LIVE</span>
+            <h3>Facebook Live</h3>
+            <p>मन्दिरको आधिकारिक Facebook Live लिंक प्राप्त भएपछि यहाँ जोडिनेछ।</p>
+            <div class="live-placeholder">
+              <div><div style="font-size:36px">📘</div><strong>Facebook Live प्रसारण</strong><p>आधिकारिक Facebook Live लिंक प्राप्त भएपछि यहाँ भिडियो देखिनेछ।</p></div>
+            </div>
+          </article>
+        </div>
+        <div class="live-card" style="margin-top:22px">
+          <h3>🎵 भजन तथा आरती</h3>
+          <p>मन्दिरका आधिकारिक भजन र आरतीका अडियो फाइल थपेपछि भक्तजनले यहीँबाट सुन्न सक्नेछन्।</p>
+          <div class="bhajan-list">
+            <div class="bhajan-item"><strong>१. रामकै सनिसार — नेपाली लोक भजन</strong><audio controls preload="none"><source src="audio/pashupati-bhajan.mp3" type="audio/mpeg">तपाईंको ब्राउजरले अडियो चलाउन समर्थन गर्दैन।</audio></div>
+            <div class="bhajan-item"><strong>२. भगवान् शिवको आरती</strong><audio controls preload="none"><source src="audio/shiva-aarti.mp3" type="audio/mpeg">तपाईंको ब्राउजरले अडियो चलाउन समर्थन गर्दैन।</audio></div>
+          </div>
+          <p style="font-size:12px;margin-top:14px">नोट: अडियो चलाउन GitHub मा <strong>audio</strong> नामको फोल्डर बनाएर माथि उल्लेख गरिएका MP3 फाइलहरू upload गर्नुहोस्। यी नमुना फाइल नाम हुन्।</p>
         </div>
       </div>
     </section>
